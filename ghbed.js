@@ -16,7 +16,7 @@ const main = function () {
             data.replace(/>/g, "&gt");
             data.replace(/≤/g, "&le");
             data.replace(/≥/g, "&ge");
-            document.getElementById("ghbed").contentWindow.document.body.innerHTML = styles + scripts + data;
+            document.getElementById("ghbed").contentWindow.document.body.innerHTML = "<style>" + styles + "</style>" + "<script>" + scripts + "</script>" + data;
         });
 };
 
