@@ -5,7 +5,7 @@ const main = function () {
     const scripts = document.getElementById(document.currentScript.getAttribute("scripts")).innerHTML;
     const styles = document.getElementById(document.currentScript.getAttribute("styles")).innerHTML;
 
-    fetch(`https://gist.githubusercontent.com/${user}/${id}/raw`)
+    fetch(`https://gist.githubusercontent.com/${user}/${id}/raw?${Date.now()}`)
         .then((res) => res.text())
         .then((data) => {
             const iframe = document.createElement("iframe");
