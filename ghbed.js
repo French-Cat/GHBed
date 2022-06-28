@@ -14,9 +14,8 @@ const main = function () {
             data.replace(/\n/g, "<br />");
             data.replace(/</g, "&lt");
             data.replace(/>/g, "&gt");
-            data.replace(/≤/g, "&le");
-            data.replace(/≥/g, "&ge");
-            document.getElementById("ghbed").contentWindow.document.body.innerHTML = "<style>" + styles + "</style>" + "<script>" + scripts + "</script>" + data;
+            document.getElementById("ghbed").contentWindow.document.head.innerHTML = `<style>${styles}</style><script>${scripts}<\/script>`;
+            document.getElementById("ghbed").contentWindow.document.body.innerText = data;
         });
 };
 
